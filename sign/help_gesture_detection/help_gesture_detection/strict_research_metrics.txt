@@ -1,0 +1,13 @@
+Strict Model Evaluation (No Augmentation Leakage)
+===============================================
+Accuracy:  0.9881
+Precision: 0.9884
+Recall:    0.9881
+F1 Score:  0.9881
+
+Confusion Matrix:
+The model was tested on a designated unseen test set:
+[[39  1]
+ [ 0 44]]
+ False Positives: 1 (Predicted 'Help' when it was 'Other')
+False Negatives: 0 (Predicted 'Other' when it was 'Help') -> This is excellent for a safety system as it missed 0 help calls.

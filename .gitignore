@@ -1,0 +1,34 @@
+# ── Secrets (NEVER commit) ───────────────────────────────────────────
+.env
+.env.*
+**/supabase_service_key.txt
+**/household_id.txt
+
+# ── Private / biometric data (do not publish faces) ──────────────────
+**/dataset/known_faces/
+**/embeddings/*.pkl
+**/snapshots/
+
+# ── Python ───────────────────────────────────────────────────────────
+**/venv*/
+**/.venv/
+**/__pycache__/
+*.pyc
+*.pyo
+
+# ── Node / Expo (mobile app) ─────────────────────────────────────────
+**/node_modules/
+**/.expo/
+**/dist/
+**/web-build/
+
+# ── Backups / scratch ────────────────────────────────────────────────
+*.bak
+*.ORIGINAL
+fall_deploy_for_review.py
+
+# ── Archives / OS junk ───────────────────────────────────────────────
+*.zip
+__MACOSX/
+.DS_Store
+Thumbs.db

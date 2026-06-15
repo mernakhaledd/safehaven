@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Safe Haven"
+		},
+		{
+			"path": "../../../../../../sign/help_gesture_detection/help_gesture_detection"
+		}
+	],
+	"settings": {}
+}

@@ -1,0 +1,10 @@
+# SafeHaven – Raspberry Pi requirements
+# Install with: pip install -r requirements_pi.txt
+
+opencv-python
+numpy
+requests
+
+# picamera2 is pre-installed on Raspberry Pi OS (Bullseye / Bookworm).
+# If it is missing, install it with:
+#   sudo apt install -y python3-picamera2
