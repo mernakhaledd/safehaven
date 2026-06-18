@@ -136,11 +136,11 @@ export default function ReceiverHome() {
   const load = useCallback(async (silent = false) => {
     if (!silent) setLoading(true);
     try {
-      if (activeProfile && activeProfile.persona === 'care_receiver') {
+      if (session?.user?.id && activeProfile && activeProfile.persona === 'care_receiver') {
         const { data: people, error: peopleError } = await supabase
           .from('profiles')
           .select('id, display_name')
-          .eq('user_id', session?.user.id)
+          .eq('user_id', session.user.id)
           .eq('persona', 'care_giver');
 
         if (peopleError) {

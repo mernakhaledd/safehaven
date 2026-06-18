@@ -3,6 +3,10 @@
 .env.*
 **/supabase_service_key.txt
 **/household_id.txt
+supabase_setup_push.sql
+**/google-services.json
+**/*service-account*.json
+**/*serviceaccount*.json
 
 # ── Private / biometric data (do not publish faces) ──────────────────
 **/dataset/known_faces/
@@ -26,6 +30,10 @@
 *.bak
 *.ORIGINAL
 fall_deploy_for_review.py
+
+# ── Nested git backups (the app keeps its own .git for EAS builds) ────
+**/.git_old/
+**/.git_off/
 
 # ── Archives / OS junk ───────────────────────────────────────────────
 *.zip

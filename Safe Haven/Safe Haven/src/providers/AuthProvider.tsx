@@ -33,6 +33,14 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     };
   }, []);
 
+  // Once signed in, save this device's push token so alerts can reach it
+  // even when the app/phone is closed (no-op in Expo Go).
+  useEffect(() => {
+    const uid = session?.user?.id;
+    if (!uid) return;
+    import('../lib/notifications').then((m) => m.registerPushTokenForSession(uid));
+  }, [session?.user?.id]);
+
   const value = useMemo(() => ({ isReady, session }), [isReady, session]);
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;

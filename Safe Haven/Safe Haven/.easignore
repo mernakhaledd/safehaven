@@ -1,0 +1,12 @@
+# Files EAS Build should NOT upload (keeps the archive small).
+# google-services.json is intentionally NOT listed here, so it IS uploaded.
+
+node_modules/
+.git/
+.git_old/
+.expo/
+dist/
+web-build/
+*.apk
+*.aab
+*.log
